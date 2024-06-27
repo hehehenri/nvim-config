@@ -7,7 +7,23 @@ return {
       local hop = require 'hop'
       hop.setup()
 
-      vim.keymap.set('', 'F', hop.hint_words)
+      vim.keymap.set('n', '<leader>F', hop.hint_words)
+    end,
+  },
+  { 'tpope/vim-fugitive' },
+  {
+    'folke/trouble.nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    opts = {},
+  },
+  {
+    'supermaven-inc/supermaven-nvim',
+    config = function()
+      require('supermaven-nvim').setup {
+        keymaps = {
+          accept_suggestion = '<C-k>',
+        },
+      }
     end,
   },
 }
