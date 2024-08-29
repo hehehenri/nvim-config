@@ -265,7 +265,11 @@ require('lazy').setup {
         --     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
         --   },
         -- },
-        -- pickers = {}
+        pickers = {
+          find_files = {
+            hidden = true,
+          },
+        },
         extensions = {
           ['ui-select'] = {
             require('telescope.themes').get_dropdown(),
@@ -677,17 +681,10 @@ require('lazy').setup {
     end,
   },
 
-  -- {
-  --   'ntk148v/komau.vim',
-  --   init = function()
-  --     vim.cmd.colorscheme 'komau'
-  --   end,
-  -- },
-
   {
-    'n1ghtmare/noirblaze-vim',
+    'zaki/zazen',
     init = function()
-      vim.cmd.colorscheme 'noirblaze'
+      vim.cmd.colorscheme 'zazen'
     end,
   },
 

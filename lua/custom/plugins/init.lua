@@ -26,4 +26,7 @@ return {
       }
     end,
   },
+  {
+    'axkirillov/telescope-changed-files',
+  },
 }
